@@ -5,12 +5,17 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from .serializers import PerrosSerializer
 from .models import MisPerros
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 
 class MisPerrosViewSet(viewsets.ModelViewSet):
     queryset = MisPerros.objects.filter(Disponibilidad='D')
     serializer_class = PerrosSerializer
-
+    
+    def get_paginated_response(self, data):
+        return Response(data)
+    
 # class UserViewSet(viewsets.ModelViewSet):
 #     """
 #     API endpoint that allows users to be viewed or edited.
