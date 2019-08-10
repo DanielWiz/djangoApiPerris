@@ -25,7 +25,7 @@ SECRET_KEY = '!t1+7q2musbh(cpwysy5u2y&=mzjmic#@7^j@jp%-e8q7a!jun'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['apipaginaweb.pythonanywhere.com']
 
 
 # Application definition
@@ -132,3 +132,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
